@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Exemplo de After-Before Slide</title>
+    <style>
+      .container {
+        position: relative;
+        max-width: 100%;
+      }
+  
+      .container:before, .container:after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 50%;
+        height: 100%;
+        transition: all 0.5s;
+        z-index: -1;
+      }
+  
+      .container:before {
+        background: url('https://i.imgur.com/RsaKpIe.jpeg') no-repeat center center fixed;
+        background-size: cover;
+      }
+  
+      .container:after {
+        background: url('https://i.imgur.com/nq1LOe8.jpeg') no-repeat center center fixed;
+        background-size: cover;
+      }
+  
+      .container:hover:before {
+        width: 0;
+      }
+  
+      .container:hover:after {
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container"></div>
+  </body>
+</html>
